@@ -1,0 +1,9 @@
+#block_top_menu {
+  padding-top: 25px;
+}
+@media (max-width: 1199px) {
+  #block_top_menu {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}

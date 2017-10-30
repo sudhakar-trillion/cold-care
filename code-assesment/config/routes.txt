@@ -1,0 +1,155 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+/*
+| -------------------------------------------------------------------------
+| URI ROUTING
+| -------------------------------------------------------------------------
+| This file lets you re-map URI requests to specific controller functions.
+|
+| Typically there is a one-to-one relationship between a URL string
+| and its corresponding controller class/method. The segments in a
+| URL normally follow this pattern:
+|
+|	example.com/class/method/id/
+|
+| In some instances, however, you may want to remap this relationship
+| so that a different class/function is called than the one
+| corresponding to the URL.
+|
+| Please see the user guide for complete details:
+|
+|	https://codeigniter.com/user_guide/general/routing.html
+|
+| -------------------------------------------------------------------------
+| RESERVED ROUTES
+| -------------------------------------------------------------------------
+|
+| There are three reserved routes:
+|
+|	$route['default_controller'] = 'welcome';
+|
+| This route indicates which controller class should be loaded if the
+| URI contains no data. In the above example, the "welcome" class
+| would be loaded.
+|
+|	$route['404_override'] = 'errors/page_missing';
+|
+| This route will tell the Router which controller/method to use if those
+| provided in the URL cannot be matched to a valid route.
+|
+|	$route['translate_uri_dashes'] = FALSE;
+|
+| This is not exactly a route, but allows you to automatically route
+| controller and method names that contain dashes. '-' isn't a valid
+| class or method name character, so it requires translation.
+| When you set this option to TRUE, it will replace ALL dashes in the
+| controller and method URI segments.
+|
+| Examples:	my-controller/index	-> my_controller/index
+|		my-controller/my-method	-> my_controller/my_method
+*/
+//$route['default_controller'] = 'welcome';
+$route['404_override'] = 'Site/Pagenotfound';
+$route['translate_uri_dashes'] = FALSE;
+
+
+
+$route['default_controller'] = 'Site';
+
+$route['page-not-found'] ='Site/Pagenotfound';
+
+
+///////////// site routes /////////////////
+//$route['index'] = 'site';
+
+
+
+$route['brand/:any'] = "Site/categoryproduct/";
+$route['categories/:any'] = "Site/categoryAllproduct/";
+$route[':any/:any/products'] = 'Site/brandsproducts';
+$route['product-view/:any/:any'] = 'Site/productview';
+$route['cart-view'] = 'Site/cartview';
+$route['checkout'] = 'Site/checkout';
+
+$route['login'] = 'Site/login';
+$route['confirm-order/:any'] = 'Site/confirmorder';
+$route['category/:any/:any'] = "Site/filtered";
+
+$route['order-list'] = 'Site/orderlist';
+$route['order-history/:any'] = 'Site/orderhistory';
+
+$route['profile-info'] = 'Site/profileinfo';
+
+$route['order-list'] = 'Site/orderlist';
+$route['logout'] = 'Site/logout';
+
+$route['confirm-registration/:any'] = 'Site/confirmregistration';
+
+
+
+
+$route['admin-logout'] = 'Admin/logout';
+
+
+
+
+
+////// Admin routes ///////////////////////
+
+$route['admin-dashboard'] = 'Admin/dashboard';
+
+$route['admin-add-user'] = 'Admin/adduser';
+$route['admin-view-user'] = 'Admin/viewuser';
+$route['admin-edit-user/:num'] = 'Admin/edituser/$1';
+
+$route['admin-view-new-users'] = 'Admin/viewnewusers';
+$route['admin-view-active-users'] = 'Admin/viewactiveusers';
+$route['admin-view-inactive-users'] = 'Admin/viewinactiveusers';
+
+
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////   Brand routing ///////////////////////////////
+
+$route['admin-add-brand'] = 'Admin/addbrand';
+$route['admin-view-brands'] = 'Admin/viewbrands';
+$route['admin-edit-brand/:num'] = 'admin/editbrand/$1';
+
+$route['admin-add-category']= 'Admin/addcategory';
+$route['admin-view-categories']= 'Admin/viewcategories';
+$route['admin-edit-category/:num'] = 'Admin/editcategory/$1';
+
+
+
+$route['admin-add-subcategory']= 'Admin/addsubcategory';
+$route['admin-view-subcategories']= 'Admin/viewsubcategories';
+$route['admin-edit-subcategory/:num'] = 'Admin/editsubcategory/$1';
+
+
+
+$route['admin-add-base-uom']= 'Admin/addbaseuom';
+$route['admin-view-base-uom']= 'Admin/viewbaseuom';
+$route['admin-edit-base-uom/:num'] = 'Admin/editbaseuom/$1';
+
+
+$route['admin-add-measurement']= 'Admin/addmeasurement';
+$route['admin-view-measurements']= 'Admin/viewmeasurements';
+$route['admin-edit-measurement/:num'] = 'Admin/editmeasurement/$1';
+
+$route['admin-add-product'] = 'Admin/addproduct';
+$route['admin-view-products'] = 'Admin/viewproducts';
+$route['admin-edit-product/:num'] = 'Admin/editproduct/$1';
+
+$route['admin-view-orders'] = 'Admin/viewAllorders';
+$route['admin-view-awaiting-orders'] = 'Admin/viewAllorders';
+$route['admin-view-confirmed-orders'] = 'Admin/viewAllorders';
+$route['admin-view-delivered-orders'] = 'Admin/viewAllorders';
+$route['admin-view-cancelled-orders'] = 'Admin/viewAllorders';
+
+$route['admin-view-order/:num'] = 'Admin/vieworder/$1';
+$route['admin-change-order-status/:num'] = 'Admin/ChangeOrderStatus/$1';
+
+$route['admin-view-orders-category'] = 'Admin/vieworderbycategory';
+$route['admin-view-orders-products'] = 'Admin/vieworderbyproduct';
+$route['admin-view-todays-deliveries'] = 'Admin/todaysdeliveries';

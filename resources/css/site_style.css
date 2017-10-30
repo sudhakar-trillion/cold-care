@@ -1,0 +1,150 @@
+
+.digital_form { color:#000;}
+
+#heading{ margin-top:0px; color:#fff !important; padding-top:2px; padding-left:10px; padding-bottom: 10px; background:#CCC;}
+.heading-h2{ display:inline-block; font-size:16px; margin:0px; line-height:50px; color:#000 !important; text-align:center !important }
+.navbar-brand img{float:right; height:50px; width:auto; margin-top: -14px;}
+
+fieldset{
+		padding-top:5px;
+}
+
+.err_msg{ color:red; padding-top:3px !important; }
+
+
+legend{ border:none; }
+
+.form-horizontal .control-label{
+	float:left !important;
+	text-align:left !important;
+}
+#button1id{
+	padding-left:30px !important;
+	padding-right:30px !important;
+
+}
+
+.dropdown li.nav-header{
+	padding: 5px!important;
+    background: #eee;
+	color:#000!important;
+    margin-bottom: 3px;
+	font-size:14px!important;
+}
+
+.dropdown li
+{
+	display: block;
+    padding: 0px!important;
+    line-height: 1.42857143;
+    color: #777;
+    font-size:13px!important;
+    text-align: left;	
+}
+.new_selection_box{
+	position:relative;
+}
+.new_selection_box ul.arc_application_dropdown{
+	    width: 91.5%;
+    height: auto;
+    padding: 0px;
+    position: absolute;
+    top: 31px;
+    box-sizing: border-box;
+    z-index: 999;
+    background: #fff;
+    border: 1px solid #ccc;
+	display:none;
+}
+.new_selection_box ul.arc_application_dropdown li{
+	cursor:pointer;
+	line-height:28px;
+	padding:0 15px;
+	border-bottom:1px solid #eee;
+}
+.new_selection_box ul.arc_application_dropdown li:hover{
+	background:#f9f9f9;
+}
+.placeholder-no-fix { margin-bottom:10px!important;}
+
+.table-data th{ font-size:13px!important; cursor:pointer}
+
+.dscformview-modal{  width: 750px; }
+
+.modal-header{background:#ffd777!important;}
+.site-footer{background:#ffd777!important;}
+
+.active{background:#ffd777!important;}
+.logout{background:#5cb85c!important;     border: none!important;}
+.modal-body{
+	padding:0 15px !important;
+}
+.digital-certificate-view label{
+    color: #000;
+    padding-right: 0;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    width: 150px;
+    border-right: 1px solid #eee;
+}
+.digital-certificate-view{
+	border-right: 1px solid #ccc;
+    background: #fbfbfb;
+    padding: 15px 0;
+}
+.digital-certificate-view .form-group{
+    padding: 8px 15px;
+	margin:0px;
+}
+.digital-certificate-view .form-group:nth-child(odd){
+	background: #fff;
+}
+.digital-certificate-view span{
+}
+
+.file_attached
+{
+    margin-top: 8px !important;
+	color:#F36;
+    float: left;
+    font-weight: bold;	
+	cursor:pointer;
+}
+
+.requ_ide{ margin-bottom:0px; font-weight:bold; }
+
+.requ_ide label{ margin-bottom:0px; line-height:35px; }
+.requ_ide  span{color:red;}
+.import_form_bg{
+	margin:80px 0 260px 0;
+	background:#fff;
+	padding:25px;
+}
+.import_form_bg label{
+	color:#333;
+	font-size:15px;
+}
+.file_type{
+	padding:5px;
+	margin-right:0px !important;
+	width:100%;
+	border:1px solid #ccc;
+}
+
+.other-combinations-details-contain{
+	padding:15px;
+	background:#fff;
+	margin-top:20px;
+}
+.other-combinations-details-contain .col-sm-6 digital-certificate-view{
+	padding:0px;
+}
+.other-combinations-details-contain .col-sm-6 digital-certificate-view:last-child{
+	border-right:0px;
+}
+.chk_boxs{
+    margin-top: 1px !important;
+    margin-right: 5px !important;
+    background: red;
+    box-shadow: none;
+    height: 12px;}
